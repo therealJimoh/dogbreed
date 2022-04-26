@@ -1,0 +1,40 @@
+.dog-container {
+  border: 1px solid #fff;
+  display: flex;
+  .dog-img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .random-activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    h4 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .random-activity {
+      h4 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
