@@ -1,14 +1,19 @@
 import axios from "axios";
 
-const getBreed = async (ctx, data) => {
+const getBreed = async (ctx, next) => {
   try {
-    const breed = await axios.get(
-      `https://dog.ceo/api/breed/${inputbreed}/images/random`,
-      data
+    const breed = ctx.request.body.breed;
+    console.log(breed);
+    const dogBreed = await axios.get(
+      `https://dog.ceo/api/breed/${breed}/images/random`
     );
-    ctx.body = breed.data;
+    if (dogBreed) {
+      ctx.status = 200;
+      let result = dogBreed.data;
+      ctx.response.body = result;
+    }
   } catch (error) {
-    ctx.body = error.data;
+    ctx.response.body = error.response.data;
   }
 };
 

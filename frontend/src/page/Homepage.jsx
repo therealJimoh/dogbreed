@@ -5,6 +5,7 @@ import { formValidation } from "../schema/form";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getActivity, reset } from "../features/reducers/activitySlice";
+import { getBreed } from "../features/reducers/breedSlice";
 
 // Import styles and component
 import "./homepage.scss";
@@ -14,6 +15,7 @@ const Homepage = () => {
   const {
     handleSubmit,
     register,
+    getValues,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(formValidation),
@@ -22,8 +24,11 @@ const Homepage = () => {
   const dispatch = useDispatch();
 
   const { activity } = useSelector((state) => state.activitySlice);
+  const { breed } = useSelector((state) => state.breedSlice);
 
   const handleFetchBreed = () => {
+    let formVal = getValues();
+    dispatch(getBreed(formVal));
     dispatch(reset());
     dispatch(getActivity());
   };
@@ -49,8 +54,9 @@ const Homepage = () => {
           </form>
         </div>
         <div className="form-result">
+          <p>{breed && breed.code && breed.message}</p>
           <Dog
-            dogbreed="https://images.dog.ceo/breeds/akita/512px-Ainu-Dog.jpg"
+            dogbreed={breed && breed.message}
             randomActivity={activity && activity.activity}
           />
         </div>

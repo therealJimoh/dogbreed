@@ -8,10 +8,12 @@ In the project directory, you can run:
 
 ### `npm install`
 
-It install the dependencies and node_modules for the app
+To start the frontend application, change to the root directory of the project
+
+### `cd ..`
+
+And then run
 
 ### `npm start`
-
-To start the application
 
 

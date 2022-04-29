@@ -1,6 +1,7 @@
 import Koa from "koa";
 import Router from "@koa/router";
 import cors from "@koa/cors";
+import koaBody from "koa-body";
 import fetch from "isomorphic-fetch";
 
 // Import routes
@@ -13,12 +14,14 @@ const port = 3011;
 
 app.use(cors({ origin: "*" }));
 
+app.use(koaBody())
+
 // Routes
 router.get("/", (ctx) => {
   ctx.body = "Welcome to Dog Breed Server Side Web App!";
 });
 router.get("/api/activity", getActivity);
-router.get("/api/breed", getBreed);
+router.post("/api/breed", getBreed);
 
 app.use(async (ctx, next) => {
   await next();
