@@ -1,8 +1,7 @@
-# dogs
+# A full stack web app that displays dog breeds and random fun activity - Dogs
 
 This is the starter code for a [Node.js](https://nodejs.org/en/about/) server
-using the [Koa web framework](https://koajs.com/). There a web page in
-`/public` which should be served to the user.
+using the [Koa web framework](https://koajs.com/). There is a frontend code in [React.Js](https://reactjs.org/) which should be served to the user.
 
 ## Getting started
 
@@ -20,19 +19,27 @@ v16.13.1
 ```
 - Download or clone the repo into your directory
 
-# use this command on your cmd ot terminal
-# `git clone https://github.com/therealJimoh/dogbreed`
-## change into directory
-### `cd dogbreed/`
+- Use this command on your cmd or terminal
+```sh
+git clone https://github.com/therealJimoh/dogbreed
+```
 
-Then, inside this project, run
+- Change into the root directory if you are not already there. Use:
+```sh
+cd dogbreed
+```
 
-### `npm install` 
-To successfully install its dependencies.
+- Then, inside this project, run
 
-- To get the backend server running, run this in the project directory
+```sh
+npm install
+```
 
-### `npm run server`
+# To get the backend server running, run this in the project directory
+
+```sh
+npm run server
+```
 
 If the server starts successfully, you will see
 
@@ -40,22 +47,32 @@ If the server starts successfully, you will see
 Server running on http://localhost:3011
 ```
 
-- To get the Frontend running
+# To get the Frontend running
 
-## navigate to the frontend directory
-### `cd frontend`
+ - Navigate to the frontend directory. Use this
+```sh
+cd frontend
+```
 
 Then, inside it, run
 
-### `npm install`
+```sh
+npm install
+```
 
-To start the frontend application, change to the root directory of the project
+- To start the frontend application, change to the root directory of the project and run
 
-### `cd ..`
+```sh
+npm start
+```
 
-And then run
+If it starts successfully, you will see
 
-### `npm start`
+```sh
+You can now view in the browser at Local:  http://localhost:3011
+```
+
+
 
 ## Documentation
 
