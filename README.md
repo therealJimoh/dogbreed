@@ -20,8 +20,8 @@ v16.13.1
 ```
 - Download or clone the repo into your directory
 
-## use this command on your cmd ot terminal
-### `git clone https://github.com/therealJimoh/dogbreed`
+# use this command on your cmd ot terminal
+# `git clone https://github.com/therealJimoh/dogbreed`
 ## change into directory
 ### `cd dogbreed/`
 
