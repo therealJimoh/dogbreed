@@ -10,7 +10,7 @@ import getBreed from "./controllers/getBreed.js";
 
 const app = new Koa();
 const router = new Router();
-const port = 3011;
+const port = 80
 
 app.use(cors({ origin: "*" }));
 
