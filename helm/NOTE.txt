@@ -1,0 +1,7 @@
+Install Ingress Controller
+
+helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace
+
+Map the host to the ELB on Route53
