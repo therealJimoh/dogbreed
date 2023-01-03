@@ -11,7 +11,7 @@ metadata:
   {{- end }}
 spec:
   rules:
-    - host: dogbreed-frontend.jimoh.xyz
+    - host: dogbreed-frontend.whatever.xyz
       http:
         paths: 
           - path: /
