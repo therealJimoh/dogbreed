@@ -10,14 +10,21 @@ metadata:
   {{- end }}
 spec:
   rules:
-    - host: dogbreed-api.jimoh.xyz
+    - host: dogbreed.jimoh.xyz
       http:
         paths:
-          - path: /
+          - path: /?(.*)
             pathType: Prefix
             backend:
               service:
-                name: release-name-dogbreed-chart
+                name: release-name-dogbreed-chart-backend
+                port:
+                  number: 80
+          - path: /?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: release-name-dogbreed-chart-frontend
                 port:
                   number: 80
               
