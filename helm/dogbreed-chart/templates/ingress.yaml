@@ -13,19 +13,19 @@ spec:
     - host: dogbreed.jimoh.xyz
       http:
         paths:
-          - path: /?(.*)
+          - path: /*
             pathType: Prefix
             backend:
               service:
                 name: release-name-dogbreed-chart-backend
                 port:
-                  number: 80
-          - path: /?(.*)
+                  number: 5000
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: release-name-dogbreed-chart-frontend
                 port:
-                  number: 80
+                  number: 4000
               
              
