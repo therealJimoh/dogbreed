@@ -17,7 +17,7 @@ app.use(cors({ origin: "*" }));
 app.use(koaBody())
 
 // Routes
-router.get("/", (ctx) => {
+router.get("/backend", (ctx) => {
   ctx.body = "Welcome to Dog Breed Server Side Web App!";
 });
 router.get("/api/activity", getActivity);
