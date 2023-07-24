@@ -5,14 +5,18 @@ pipeline{
     // tools {nodejs "Node"}
 
     stages {
+        /* groovylint-disable-next-line UnnecessaryGString */
         stage("Checkout target branch") {
             steps {
                 checkout scm
             }
         }
+        /* groovylint-disable-next-line UnnecessaryGString */
         stage ("build and publish") {
+            dir ("/frontend") {
+                sh 'pwd'
+            }
             steps {
-                dir 'frontend/'
                 sh 'docker build -t dogbreed-fe-get:process-auto1 .'
             }
         }
