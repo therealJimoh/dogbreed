@@ -13,11 +13,10 @@ pipeline{
         }
         /* groovylint-disable-next-line UnnecessaryGString */
         stage ("build and publish") {
-            dir ("/frontend") {
-                sh 'pwd'
-            }
             steps {
-                sh 'docker build -t dogbreed-fe-get:process-auto1 .'
+                dir ("/frontend") {
+                    sh 'docker build -t dogbreed-fe-get:process-auto1 .'
+                }
             }
         }
     }
