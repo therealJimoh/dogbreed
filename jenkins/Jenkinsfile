@@ -5,15 +5,16 @@ pipeline{
     tools {nodejs "Node"}
 
     stages {
-        stage('Checkout target branch') {
+        stage("Checkout target branch") {
             steps {
                 checkout scm
             }
         }
-        stage ('build and publish'){
-            dir 'frontend/'
-            sh 'docker build -t dogbreed-fe-get:process-auto1 .'
-
+        stage ("build and publish") {
+            steps {
+                dir 'frontend/'
+                sh 'docker build -t dogbreed-fe-get:process-auto1 .'
+            }
         }
     }
 }
