@@ -15,7 +15,7 @@ pipeline{
         stage ("build and publish") {
             steps {
                 sh 'cd frontend'
-                sh 'docker build -t dogbreed-fe-get:process-auto1 .'
+                sh 'docker build -t dogbreed-fe-get .'
                 
             }
         }
