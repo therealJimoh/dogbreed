@@ -12,10 +12,15 @@ pipeline{
             }
         }
         /* groovylint-disable-next-line UnnecessaryGString */
-        stage ("build and publish") {
+        stage ("build image") {
             steps {
                 sh 'cd frontend && docker build -t dogbreed-fe-get .'
             }
         }
+        // stage ("publish image") {
+        //     steps {
+        //         sh ''
+        //     }
+        // }
     }
 }
